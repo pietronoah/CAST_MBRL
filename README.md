@@ -72,7 +72,7 @@ python cast/evaluate.py task=dog-run checkpoint=/path/to/checkpoint.pt save_vide
 
 CAST is evaluated on 14 high-dimensional continuous-control tasks from the DeepMind Control Suite and HumanoidBench against five representative baselines — SAC, DreamerV3, TD-MPC2, BMPC, and BOOM — and achieves the best AUC performance profile among all baselines while transferring zero-shot from simulation to a physical Unitree Go2 quadruped performing a dynamic handstand. Full learning curves, ablations, and hardware deployment footage are on the [project page](https://pietronoah.github.io/cast/).
 
-Raw per-seed training curves used to generate the paper's figures are in [`cast/results/`](cast/results/), one CSV per task per method (`step,reward,seed`), organized by method: `cast/`, `sac/`, `dreamerv3/`, `tdmpc2/`, `bmpc/`, `boom/`.
+Training curves used to generate the paper's figures are in [`cast/results/`](cast/results/), one CSV per task, organized by method: `cast/`, `sac/`, `dreamerv3/`, `tdmpc2/`, `bmpc/`, `boom/`. Format varies by source: `cast` and the DMControl tasks for `bmpc` are raw per-seed runs (`step,reward,seed`); all HumanoidBench tasks, and every `boom`/`dreamerv3`/`sac`/`tdmpc2` task, are pre-aggregated (`step,reward,std,ci95`).
 
 ## Citation
 
